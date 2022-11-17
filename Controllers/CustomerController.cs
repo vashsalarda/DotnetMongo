@@ -6,14 +6,14 @@ using Customer.Models;
 namespace Customer.Controllers;
 
 [Controller]
-[Route("customers")]
-public class PlaylistController : Controller
+[Route("api/customers")]
+public class CustomerController : Controller
 {
 
 	private readonly MongoDBService _mongoDBService;
 	private static readonly Regex sWhitespace = new(@"\s+");
 
-	public PlaylistController(MongoDBService mongoDBService)
+	public CustomerController(MongoDBService mongoDBService)
 	{
 		_mongoDBService = mongoDBService;
 	}
